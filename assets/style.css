@@ -1,0 +1,74 @@
+/*box sizing helped eliminate the defualt width and height settings to myall my elements*/
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:  0;
+
+}
+/*display flex is needed for flexibility and control of the header*/
+header{
+    display:flex;
+    color: cornflowerblue;
+}
+
+/* adding margin to the title header was done so that way the nav can move more farther to the top right of the page*/
+#title {
+    margin: 50px;
+    
+    
+}
+/*
+header nav {
+    float: right;
+    display: flex;
+    
+}
+
+/*navbar is marked as a class the teext color is green yellow the justify content selector ...
+displaay flex allowed the nav to go horizontaally instead of vertically. list style removed the bullet points maade from ul tag
+i used box model to determine the positioning og my nav bar top inicates to postion at top of title
+absolute set .... margin is set for 0 with 220px as the right */
+.navbar ul{
+    
+    display:flex;
+    list-style: none;
+    
+    
+    
+    
+    
+    
+    
+    
+}
+/*represents the color change when i hover over nav links only*/
+.navbar a:hover {
+    color:chartreuse;
+
+}
+/*represents the text of the links*/
+.navbar a {
+    color:orchid;
+    padding: 0 50px;
+    
+    
+}
+
+#header-img {
+    max-width: fit-content;
+    
+}
+
+
+
+@media screen and (max-width: 1020px){
+    body {
+        display:contents;
+        width: 100%;
+        overscroll-behavior-x:contain;
+        overflow: auto;
+    }
+}
+
