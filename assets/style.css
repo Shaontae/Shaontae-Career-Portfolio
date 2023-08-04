@@ -4,71 +4,142 @@
 }
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin:  0;
+    margin: 0;
+    height: 0;
 
-}
-/*display flex is needed for flexibility and control of the header*/
-header{
-    display:flex;
-    color: cornflowerblue;
-}
-
-/* adding margin to the title header was done so that way the nav can move more farther to the top right of the page*/
-#title {
-    margin: 50px;
-    
-    
-}
-/*
-header nav {
-    float: right;
-    display: flex;
-    
-}
-
-/*navbar is marked as a class the teext color is green yellow the justify content selector ...
-displaay flex allowed the nav to go horizontaally instead of vertically. list style removed the bullet points maade from ul tag
-i used box model to determine the positioning og my nav bar top inicates to postion at top of title
-absolute set .... margin is set for 0 with 220px as the right */
-.navbar ul{
-    
-    display:flex;
-    list-style: none;
-    
-    
-    
-    
-    
-    
-    
-    
-}
-/*represents the color change when i hover over nav links only*/
-.navbar a:hover {
-    color:chartreuse;
-
-}
-/*represents the text of the links*/
-.navbar a {
-    color:orchid;
-    padding: 0 50px;
-    
-    
-}
-
-#header-img {
-    max-width: fit-content;
-    
 }
 
 
 
-@media screen and (max-width: 1020px){
-    body {
-        display:contents;
-        width: 100%;
-        overscroll-behavior-x:contain;
-        overflow: auto;
+/*refers to the heade tile. the float is used to havee the word float the words in any directions you prefer
+IN ORDER TO HAVE HEADER AND AND NAV ALL TOGETHER IN ONE CONTENT BOX YOU MUST 
+USE THE POSITION ABSOLUTE PROPERTY. */
+h1{
+    
+    position:absolute;
+    border: 10px dashed;
+    border-color: coral;
+    background-color:yellow;
+    top:0;
+    margin: 0;
+    
+}
+
+    Header nav {
+        
+        position:relative;
+        
     }
+
+    /*represents the color change when i hover over nav links only*/
+.navbar a:hover {
+    color:dimgrey;
+
 }
+
+
+    .navbar ul{
+    
+        display:flex;
+        list-style: none;
+        float: right;
+    }
+    .navbar li{
+        
+        float: right;
+    }
+
+    /*represents the text of the links*/
+.navbar a {
+    color:orangered;
+    padding: 0 50px;
+    display: flex;
+    text-align: right;
+    text-decoration:underline 20px orangered;  
+}
+        
+
+h2 {
+    color: goldenrod;
+
+}
+aside {
+    float: left;
+    padding: 10px;
+    columns: 1;
+}
+
+
+.row-1{
+    flex: 1;
+    padding: 10px;
+    line-height: 100px;
+    columns: 1;
+    margin: 0 20px;
+    
+}
+
+.row-2{
+    flex: 1;
+    display: flex;
+    list-style: 100px;
+    
+}
+
+
+.col{
+    display: table-cell;
+    padding: 1em;   
+}
+
+section a {
+    padding: 2px;
+    margin: 0 2px;
+}
+
+/*created vertical line*/
+#decor
+{
+    display: inline-block;
+    border-left: 8px dashed olivedrab;
+    height: 500px;
+    margin: 0 40px;
+    
+    
+}
+
+
+#footer {
+    position: relative;
+    top: 0;
+    
+}
+
+/*dimensions for screen changes 1020px or smaller*/
+/* vertical line disappears */
+@media screen and (max-width: 1020px) {
+    #decor {
+      display: none;
+    }
+    /* header and header title will stay as relative  */
+    header, h1 {
+      position: relative;
+    }
+  }
+  
+  /* work column stays as 1 row 780px or smaller */
+  @media screen and (max-width: 780px) {
+    .col a{
+      display: table-cell;
+      padding: 1em;
+    }
+    /* header stays relative */
+    header{
+      position: relative;
+    }
+  }
+
+
+
+
 
